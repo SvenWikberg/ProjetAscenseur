@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.GHIElectronics.StepperL6470</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470">
+            <summary>A StepperL6470 module for Microsoft .NET Gadgeteer</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.#ctor(System.Int32)">
+            <summary>Constructs a new instance.</summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.Reset">
+            <summary>Resets the module</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.Nop">
+            <summary>Send NOP operation code to the module</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.SetParam(Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress,System.UInt32)">
+            <summary>Sets a parameter to the passed in value</summary>
+            <param name="param">Parameter to set</param>
+            <param name="value">Value to set</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GetParam(Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress)">
+            <summary>Get a value for a given parameter</summary>
+            <param name="param">Parameter to retrieve</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.Run(Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction,System.UInt32)">
+            <summary>Runs the motor</summary>
+            <param name="direction">Direction of the motor</param>
+            <param name="speed">Speed of the motor</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepClock(Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction)">
+            <summary>Steps the motor while the stepClock pin is high</summary>
+            <param name="direction">Direction of the motor</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.Move(Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction,System.UInt32)">
+            <summary>Moves the motor in the passed in direction for the passed in steps</summary>
+            <param name="direction">Direction to move the motor</param>
+            <param name="nStep">Number of steps to move</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GoToPosition(System.UInt32)">
+            <summary>Sets the motor to a specific position</summary>
+            <param name="absPos">Absolute position to move to</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GoToDirection(Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction,System.UInt32)">
+            <summary>Moves to a specific position, going in the passed in direction</summary>
+            <param name="direction">Direction to move</param>
+            <param name="absPos">Absolute position to move to</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GoUntil(Gadgeteer.Modules.GHIElectronics.StepperL6470.Action,Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction,System.UInt32)">
+            <summary>Moves the motor until a specific action happens</summary>
+            <param name="action">Action to stop on</param>
+            <param name="direction">Direction to move</param>
+            <param name="speed">Speed to move in</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.ReleaseSW(Gadgeteer.Modules.GHIElectronics.StepperL6470.Action,Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction)">
+            <summary>TODO</summary>
+            <param name="action"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GoHome">
+            <summary>Moves the motor to the home position</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GoMark">
+            <summary>Goes the motor to the mark position</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.ResetPos">
+            <summary>Resets the motor to the position</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.ResetDevice">
+            <summary>Resets the device</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.SoftStop">
+            <summary>Soft stop operation</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.HardStop">
+            <summary>Hard stop operation</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.SoftHiZ">
+            <summary>TODO</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.HardHiZ">
+            <summary>TODO</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.GetStatus">
+            <summary>Gets the status</summary>
+            <returns>Status</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.BusyHW">
+            <summary>Returns if the hardware is busy</summary>
+            <returns>If the hardware is busy</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.BusySW">
+            <summary>Returns if the software is busy</summary>
+            <returns>If the hardware is busy</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.SetRegisters(Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers)">
+            <summary>Sets the registers to the passed in register values</summary>
+            <param name="registers">Register values to set the values to</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.SpeedStepsToPar(System.UInt32)">
+            <summary>Converts speed steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.AccDecStepsToPar(System.UInt32)">
+            <summary>Converts AccDec steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.MaxSpdStepsToPar(System.UInt32)">
+            <summary>Converts max speed steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.MinSpdStepsToPar(System.UInt32)">
+            <summary>Converts min speed steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.FSSpdStepsToPar(System.UInt32)">
+            <summary>Converts FS speed steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.IntSpdStepsToPar(System.UInt32)">
+            <summary>Converts int speed steps to par.</summary>
+            <param name="steps">The steps.</param>
+            <returns>Steps expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.KvalPercToPar(System.Single)">
+            <summary>Converts Kval percent to par.</summary>
+            <param name="perc">The percent.</param>
+            <returns>Percent expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.BemfSlopePercToPar(System.Single)">
+            <summary>Converts BEMF slope percent to par.</summary>
+            <param name="perc">The percent.</param>
+            <returns>Percent expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.KThermToPar(System.UInt32)">
+            <summary>Converts KTherm to par.</summary>
+            <param name="kTherm">The percent.</param>
+            <returns>KTherms expressed as par.</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.StallThToPar(System.UInt32)">
+            <summary>Converts StallTH to par.</summary>
+            <param name="stallTh">The StallTh.</param>
+            <returns>StallTh expressed as par.</returns>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.Action">
+            <summary>Action Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Action.Reset">
+            <summary>The reset option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Action.Copy">
+            <summary>The copy option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction">
+            <summary>Direction Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction.Forward">
+            <summary>The forward option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Direction.Reverse">
+            <summary>The reverse option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask">
+            <summary>Status Masks</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.Hiz">
+            <summary>The HIZ status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.Busy">
+            <summary>The BUSY status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.SwF">
+            <summary>The SW_F status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.SwEvn">
+            <summary>The SW_EVN status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.Dir">
+            <summary>The DIR status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.MotStatus">
+            <summary>The MOT_STATUS status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.NotPerfCmd">
+            <summary>The NOTPERF_CMD status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.WrongCmd">
+            <summary>The WRONG_CMD status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.Uvlo">
+            <summary>The OVLO status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.ThWrn">
+            <summary>The TH_WRN status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.ThSd">
+            <summary>The TH_SD status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.Ocd">
+            <summary>The OCD status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.StepLossA">
+            <summary>The STEP_LOSS_a status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.StepLossB">
+            <summary>The STATUS_STEP_LOSS_B status mask.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StatusMask.SckMod">
+            <summary>The STATUS_SCK_MOD status mask.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress">
+            <summary>Registers</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.AbsPos">
+            <summary>The ABS_POS register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.ElPos">
+            <summary>The EL_POS register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Mark">
+            <summary>The MARK register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Speed">
+            <summary>The SPEED register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Acc">
+            <summary>The ACC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Dec">
+            <summary>The DEC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.MaxSpeed">
+            <summary>The MAX_SPEED register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.MinSpeed">
+            <summary>The MIN_SPEED register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.FsSpd">
+            <summary>The FS_SPD register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.KValHold">
+            <summary>The KVAL_HOLD register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.KValRun">
+            <summary>The KVAL_RUN register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.KValAcc">
+            <summary>The KVAL_ACC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.KValDev">
+            <summary>The KVAL_DEC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.IntSpd">
+            <summary>The INT_SPD register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.StSlp">
+            <summary>The ST_SLP register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.FnSlpAcc">
+            <summary>The FN_SLP_ACC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.FnSlpDec">
+            <summary>The FN_SLP_DEC register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.KTherm">
+            <summary>The K_THERM register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.AdcOut">
+            <summary>The ADC_OUT register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.OcdTh">
+            <summary>The OCD_TH register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.StallTh">
+            <summary>The STALL_TH register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.StepMode">
+            <summary>The STEP_MODE register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.AlarmEn">
+            <summary>The ALARM_EN register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Config">
+            <summary>The CONFIG register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.Status">
+            <summary>The STATUS register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.ReservedReg1">
+            <summary>The RESERVED_REG1 register.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.RegisterAddress.ReservedReg2">
+            <summary>The RESERVED_REG2 register.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command">
+            <summary>Commands</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.Nop">
+            <summary>The NOP command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.SetParam">
+            <summary>The SET_PARAM command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GetParam">
+            <summary>The GET_PARAM command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.Run">
+            <summary>The RUN command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.StepClock">
+            <summary>The STEP_CLOCK command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.Move">
+            <summary>The MOVE command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GoTo">
+            <summary>The GO_TO command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GoToDir">
+            <summary>The GO_TO_DIR command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GoUntil">
+            <summary>The GO_UNTIL command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.ReleaseSw">
+            <summary>The RELEASE_SW command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GoHome">
+            <summary>The GO_HOME command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GoMark">
+            <summary>The GO_MARK command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.ResetPos">
+            <summary>The RESET_POS command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.ResetDevice">
+            <summary>The RESET_DEVICE command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.SoftStop">
+            <summary>The SOFT_STOP command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.HardStop">
+            <summary>The HARD_STOP command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.SoftHiz">
+            <summary>The SOFT_HIZ command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.HardHiz">
+            <summary>The HARD_HIZ command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.GetStatus">
+            <summary>The GET_STATUS command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.ReservedCmd1">
+            <summary>The RESERVED_CMD1 command.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.Command.ReservedCmd2">
+            <summary>The RESERVED_CMD2 command.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold">
+            <summary>Overcurrent Detection Threshold Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold375mA">
+            <summary>The 375mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold750mA">
+            <summary>The 750mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold1125mA">
+            <summary>The 1125mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold1500mA">
+            <summary>The 1500mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold1875mA">
+            <summary>The 1875mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold2250mA">
+            <summary>The 2250mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold2625mA">
+            <summary>The 2625mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold3000mA">
+            <summary>The 3000mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold3375mA">
+            <summary>The 3375mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold3750mA">
+            <summary>The 3750mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold4125mA">
+            <summary>The 4125mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold4500mA">
+            <summary>The 4500mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold4875mA">
+            <summary>The 4875mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold5250mA">
+            <summary>The 5250mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold5625mA">
+            <summary>The 5625mA option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.OvercurrentDetectionThreshold.Thershold6000mA">
+            <summary>The 6000mA option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect">
+            <summary>Step Select Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1">
+            <summary>The step 1 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_2">
+            <summary>The step 2 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_4">
+            <summary>The step 4 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_8">
+            <summary>The step 8 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_16">
+            <summary>The step 16 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_32">
+            <summary>The step 32 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_64">
+            <summary>The step 64 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.StepSelect.Select_1_128">
+            <summary>The step 128 option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable">
+            <summary>Alarm Enable Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.Overcurrent">
+            <summary>The overcurrent option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.ThermalShutdown">
+            <summary>The thermal shutdown option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.ThermalWarning">
+            <summary>The thermal warning option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.UnderVoltage">
+            <summary>The under voltage option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.StallDetectA">
+            <summary>The stall detection A option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.StallDetectB">
+            <summary>The stall detection B option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.SwTurnOn">
+            <summary>The turn on sw option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.AlarmEnable.WrongNperf">
+            <summary>The wrong nperf option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement">
+            <summary>Configuration Register Options</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Int16MHz">
+            <summary>The 16MHz option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Int16MHzOscout2MHz">
+            <summary>The 16MHz OSCOUNT 2MHz option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Int16MHzOscout4MHz">
+            <summary>The 16MHz OSCOUNT 4MHz option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Int16MHzOscout8MHz">
+            <summary>The 16MHz OSCOUNT 8MHz option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Int16MHzOscout16MHz">
+            <summary>The 16MHz OSCOUNT 16MHz option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext8MHzXtalDrive">
+            <summary>The 8MHz XTAL drive option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext16MHzXtalDrive">
+            <summary>The 16MHz XTAL drive option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext24MHzXtalDrive">
+            <summary>The 24MHz XTAL drive option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext32MHzXtalDrive">
+            <summary>The 32MHz XTAL drive option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext8MHzOscoutInvert">
+            <summary>The 8MHz OSCOUNT invert option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext16MHzOscoutInvert">
+            <summary>The 16MHz OSCOUNT invert option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext24MHzOscoutInvert">
+            <summary>The 24MHz OSCOUNT invert option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOscManagement.Ext32MHzOscoutInvert">
+            <summary>The 32MHz OSCOUNT invert option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigSwMode">
+            <summary>The SW Mode configuration.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigSwMode.HardStop">
+            <summary>The hard stop option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigSwMode.User">
+            <summary>The user option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec">
+            <summary>The PWM configuration options.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_0_625">
+            <summary>The 0-625 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_0_75">
+            <summary>The 0-75 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_0_875">
+            <summary>The 0-875 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_1">
+            <summary>The 1 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_1_25">
+            <summary>The 1-25 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_1_5">
+            <summary>The 1-5 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_1_75">
+            <summary>The 1-75 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmDec.Mul_2">
+            <summary>The 2 option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt">
+            <summary>The PWM INT configuration options.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div1">
+            <summary>The DIV 1 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div2">
+            <summary>The DIV 2 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div3">
+            <summary>The DIV 3 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div4">
+            <summary>The DIV 4 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div5">
+            <summary>The DIV 5 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div6">
+            <summary>The DIV 6 option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigFPwmInt.Div7">
+            <summary>The DIV 7 option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigPowSr">
+            <summary>The POW SR configuration options.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigPowSr.V180">
+            <summary>The 180V option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigPowSr.V290">
+            <summary>The 290V option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigPowSr.V530">
+            <summary>The 530V option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigEnVscomp">
+            <summary>The EN VSCOMP configuration options.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigEnVscomp.Disable">
+            <summary>The disable option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigEnVscomp.Enable">
+            <summary>The enable option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOcSd">
+            <summary>The OC configuration options.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOcSd.Disable">
+            <summary>The disable option.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.StepperL6470.ConfigOcSd.Enable">
+            <summary>The enable option.</summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers">
+            <summary>Avalilable Registers</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.#ctor">
+            <summary>Constructs a new instance.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.AbsPos">
+            <summary>The ABS_POS register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.ElPos">
+            <summary>The EL_POS register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.Mark">
+            <summary>The MARK register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.Speed">
+            <summary>The SPEED register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.Acc">
+            <summary>The ACC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.Dec">
+            <summary>The DEC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.MaxSpeed">
+            <summary>The MAX_SPEED register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.MinSpeed">
+            <summary>The MIN_SPEED register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.FsSpd">
+            <summary>The FS_SPD register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.KValHold">
+            <summary>The KVAL_HOLD register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.KValRun">
+            <summary>The KVAL_RUN register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.KValAcc">
+            <summary>The KVAL_ACC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.KvalDec">
+            <summary>The KVAL_DEC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.IntSpd">
+            <summary>The INT_SPD register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.StSlp">
+            <summary>The ST_SLP register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.FnSlpAcc">
+            <summary>The FN_SLP_ACC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.FnSlpDec">
+            <summary>The FN_SLP_DEC register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.KTherm">
+            <summary>The K_THERM register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.AdcOut">
+            <summary>The ADC_OUT register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.OcdTh">
+            <summary>The OCD_TH register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.StallTh">
+            <summary>The STALL_TH register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.StepMode">
+            <summary>The STEP_MODE register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.AlarmEn">
+            <summary>The ALARM_EN register.</summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.GHIElectronics.StepperL6470.Registers.Config">
+            <summary>The CONFIG register.</summary>
+        </member>
+    </members>
+</doc>
